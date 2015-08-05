@@ -133,7 +133,6 @@
 		5E6DCCC31B709E8600F8B87F /* MJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F01B709E8400F8B87F /* MJPhotoToolbar.m */; };
 		5E6DCCC41B709E8600F8B87F /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F21B709E8400F8B87F /* MJPhotoView.m */; };
 		5E6DCCC51B709E8600F8B87F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F31B709E8400F8B87F /* main.m */; };
-		5E6DCCC61B709E8600F8B87F /* MyHome-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F41B709E8400F8B87F /* MyHome-Info.plist */; };
 		5E6DCCC71B709E8600F8B87F /* PiFiiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F71B709E8400F8B87F /* PiFiiAppDelegate.m */; };
 		5E6DCCC81B709E8600F8B87F /* 0605hm_lyccicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DC8F91B709E8400F8B87F /* 0605hm_lyccicon@2x.png */; };
 		5E6DCCC91B709E8600F8B87F /* 0605hm_sp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DC8FA1B709E8400F8B87F /* 0605hm_sp@2x.png */; };
@@ -3648,7 +3647,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PiFii;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "广州因孚网络科技有限公司";
 				TargetAttributes = {
 					B91838D3191B1B3000F98F9D = {
@@ -3938,7 +3937,6 @@
 				5E6DCD361B709E8600F8B87F /* hm_save01.jpg in Resources */,
 				5E6DCE591B709E8600F8B87F /* hm_yyon@2x.png in Resources */,
 				5E6DCDBC1B709E8600F8B87F /* hm_icon01@2x.png in Resources */,
-				5E6DCCC61B709E8600F8B87F /* MyHome-Info.plist in Resources */,
 				5E6DCE231B709E8600F8B87F /* hm_edit@2x.png in Resources */,
 				5E6DCE241B709E8600F8B87F /* hm_fanhui@2x.png in Resources */,
 				5E6DCDFA1B709E8600F8B87F /* hm_zanting@2x.png in Resources */,

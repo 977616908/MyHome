@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2BFB7C1B71BAFF0001DB5F /* MyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BFB7A1B71BAFF0001DB5F /* MyHomeViewController.m */; };
+		5E2BFB7D1B71BAFF0001DB5F /* MyHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BFB7B1B71BAFF0001DB5F /* MyHomeViewController.xib */; };
 		5E53473D1A5D1FDC0028BE4D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E53473C1A5D1FDB0028BE4D /* AssetsLibrary.framework */; };
 		5E626DD91B5E538F001543FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E626DD81B5E538F001543FA /* libsqlite3.dylib */; };
 		5E6DC05D1B7099D800F8B87F /* DimensionalCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6DC05C1B7099D800F8B87F /* DimensionalCode.framework */; };
@@ -758,8 +760,6 @@
 		5EB7089C1B70BD5400AD14AF /* RoutingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB708901B70BD5400AD14AF /* RoutingCell.xib */; };
 		5EB7089D1B70BD5400AD14AF /* RoutingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB708921B70BD5400AD14AF /* RoutingView.m */; };
 		5EB7089E1B70BD5400AD14AF /* RoutingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB708931B70BD5400AD14AF /* RoutingView.xib */; };
-		5EB708A31B70BDE000AD14AF /* MyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB708A11B70BDE000AD14AF /* MyHomeViewController.m */; };
-		5EB708A41B70BDE000AD14AF /* MyHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB708A21B70BDE000AD14AF /* MyHomeViewController.xib */; };
 		5EB708A81B70BF1D00AD14AF /* BindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB708A71B70BF1D00AD14AF /* BindView.m */; };
 		5EB708AB1B70C26F00AD14AF /* mh_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB708AA1B70C26F00AD14AF /* mh_bg@2x.png */; };
 		5EB708B41B70C48200AD14AF /* mh_clw_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB708AC1B70C48200AD14AF /* mh_clw_select@2x.png */; };
@@ -787,6 +787,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E2BFB791B71BAFF0001DB5F /* MyHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeViewController.h; sourceTree = "<group>"; };
+		5E2BFB7A1B71BAFF0001DB5F /* MyHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeViewController.m; sourceTree = "<group>"; };
+		5E2BFB7B1B71BAFF0001DB5F /* MyHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHomeViewController.xib; sourceTree = "<group>"; };
 		5E53473C1A5D1FDB0028BE4D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		5E626DD81B5E538F001543FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5E6DC05C1B7099D800F8B87F /* DimensionalCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DimensionalCode.framework; sourceTree = "<group>"; };
@@ -1804,9 +1807,6 @@
 		5EB708911B70BD5400AD14AF /* RoutingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutingView.h; sourceTree = "<group>"; };
 		5EB708921B70BD5400AD14AF /* RoutingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutingView.m; sourceTree = "<group>"; };
 		5EB708931B70BD5400AD14AF /* RoutingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutingView.xib; sourceTree = "<group>"; };
-		5EB708A01B70BDE000AD14AF /* MyHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyHomeViewController.h; path = ../../../../../SVN/MyHome/MyHome/Root/Home/MyHomeViewController.h; sourceTree = "<group>"; };
-		5EB708A11B70BDE000AD14AF /* MyHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyHomeViewController.m; path = ../../../../../SVN/MyHome/MyHome/Root/Home/MyHomeViewController.m; sourceTree = "<group>"; };
-		5EB708A21B70BDE000AD14AF /* MyHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyHomeViewController.xib; path = ../../../../../SVN/MyHome/MyHome/Root/Home/MyHomeViewController.xib; sourceTree = "<group>"; };
 		5EB708A61B70BF1D00AD14AF /* BindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindView.h; sourceTree = "<group>"; };
 		5EB708A71B70BF1D00AD14AF /* BindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindView.m; sourceTree = "<group>"; };
 		5EB708AA1B70C26F00AD14AF /* mh_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_bg@2x.png"; sourceTree = "<group>"; };
@@ -1896,6 +1896,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2BFB781B71BAFF0001DB5F /* Method */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Method;
+			sourceTree = "<group>";
+		};
 		5E6DC7CD1B709E8400F8B87F /* MyHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -3509,19 +3516,12 @@
 		5EB7089F1B70BD5F00AD14AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5EB708A51B70BE5300AD14AF /* Method */,
-				5EB708A01B70BDE000AD14AF /* MyHomeViewController.h */,
-				5EB708A11B70BDE000AD14AF /* MyHomeViewController.m */,
-				5EB708A21B70BDE000AD14AF /* MyHomeViewController.xib */,
+				5E2BFB781B71BAFF0001DB5F /* Method */,
+				5E2BFB791B71BAFF0001DB5F /* MyHomeViewController.h */,
+				5E2BFB7A1B71BAFF0001DB5F /* MyHomeViewController.m */,
+				5E2BFB7B1B71BAFF0001DB5F /* MyHomeViewController.xib */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		5EB708A51B70BE5300AD14AF /* Method */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Method;
 			sourceTree = "<group>";
 		};
 		5EB708A91B70C24F00AD14AF /* MyImags */ = {
@@ -3692,7 +3692,6 @@
 				5E6DCD7F1B709E8600F8B87F /* 0610hm_yidong@2x.png in Resources */,
 				5E6DCDCD1B709E8600F8B87F /* hm_jt02@2x.png in Resources */,
 				5E6DCE7C1B709E8600F8B87F /* rt_sider02@2x.png in Resources */,
-				5EB708A41B70BDE000AD14AF /* MyHomeViewController.xib in Resources */,
 				5E6DCD911B709E8600F8B87F /* 0730qt@2x.png in Resources */,
 				5E6DCCF21B709E8600F8B87F /* navbk.png in Resources */,
 				5E6DCEC31B709E8600F8B87F /* CustomGLView.xib in Resources */,
@@ -3845,6 +3844,7 @@
 				5E6DCCB41B709E8600F8B87F /* RennSDK.bundle in Resources */,
 				5E6DCD741B709E8600F8B87F /* 0610hm_shanchu@2x.png in Resources */,
 				5E6DCCD01B709E8600F8B87F /* 0605hm_yyicon@2x.png in Resources */,
+				5E2BFB7D1B71BAFF0001DB5F /* MyHomeViewController.xib in Resources */,
 				5E6DCE7E1B709E8600F8B87F /* rt_start960@2x.png in Resources */,
 				5E6DCDAF1B709E8600F8B87F /* hm_ck@2x.png in Resources */,
 				5E6DCDF91B709E8600F8B87F /* hm_yyfw@2x.png in Resources */,
@@ -4333,6 +4333,7 @@
 				5E6DCC781B709E8600F8B87F /* AFHTTPRequestOperation.m in Sources */,
 				5E6DCC721B709E8600F8B87F /* SemiAsyncDispatcher.m in Sources */,
 				5E6DCEAC1B709E8600F8B87F /* CircleBuf.mm in Sources */,
+				5E2BFB7C1B71BAFF0001DB5F /* MyHomeViewController.m in Sources */,
 				5E6DCED51B709E8600F8B87F /* VideoPlayerViewController.m in Sources */,
 				5E6DCEAD1B709E8600F8B87F /* CustomAVRecorder.mm in Sources */,
 				5E6DCF261B709E8600F8B87F /* WoButton.m in Sources */,
@@ -4378,7 +4379,6 @@
 				5E6DCC791B709E8600F8B87F /* AFHTTPRequestOperationManager.m in Sources */,
 				5E6DCC561B709E8600F8B87F /* CCGTMBase64.m in Sources */,
 				5E6DCCC51B709E8600F8B87F /* main.m in Sources */,
-				5EB708A31B70BDE000AD14AF /* MyHomeViewController.m in Sources */,
 				5E6DCECA1B709E8600F8B87F /* SearchListCell.m in Sources */,
 				5E6DCEEB1B709E8600F8B87F /* REPhotoMoreController.m in Sources */,
 				5E6DCF0A1B709E8600F8B87F /* FeedBackViewController.m in Sources */,

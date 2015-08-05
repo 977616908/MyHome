@@ -48,6 +48,12 @@
 #define ISLOADING @"isLoading" //是否有引导
 
 
+//获取设备的物理高度
+#define XL_ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//获取设备的物理宽度
+#define XL_ScreenWidth [UIScreen mainScreen].bounds.size.width
+
 //自定义Log
 #ifdef DEBUG
 #define PSLog(...) NSLog(__VA_ARGS__)

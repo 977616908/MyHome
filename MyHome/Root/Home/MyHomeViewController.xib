@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyHomeViewController">
             <connections>
+                <outlet property="bgFun" destination="5CS-2R-qMk" id="LaY-6h-RBK"/>
+                <outlet property="bgSave" destination="xOk-fW-Hnv" id="Yll-yA-qkF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -98,7 +100,7 @@
                             <state key="normal" image="mh_clw.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted" image="mh_clw.png"/>
+                            <state key="highlighted" image="mh_clw_select.png"/>
                             <connections>
                                 <action selector="onHomeClick:" destination="-1" eventType="touchUpInside" id="jGT-Tn-P77"/>
                             </connections>
@@ -122,16 +124,125 @@
             <nil key="simulatedTopBarMetrics"/>
             <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="332" y="354"/>
+        </view>
+        <view contentMode="scaleToFill" id="5CS-2R-qMk">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mh_dioagbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-iB-efM">
+                    <rect key="frame" x="0.0" y="0.0" width="217" height="142"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="家庭娱乐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tID-r1-Uc0">
+                    <rect key="frame" x="51" y="8" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afm-U0-4ft">
+                    <rect key="frame" x="17" y="44" width="77" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="-57" minY="58" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="12" minY="-25" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="魔百盒" image="mh_mbh.png">
+                        <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mh_mbh_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="eiR-qk-Bh6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UL-gF-5Th">
+                    <rect key="frame" x="127" y="44" width="77" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="-57" minY="58" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="12" minY="-25" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="家视讯" image="mh_jsx.png">
+                        <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mh_jsx_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="QJR-6q-O9h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="712.5" y="223"/>
+        </view>
+        <view contentMode="scaleToFill" id="xOk-fW-Hnv">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mh_dioagbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="BB3-tW-ZO0">
+                    <rect key="frame" x="0.0" y="0.0" width="217" height="142"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="家庭安防" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-Lt-iFA">
+                    <rect key="frame" x="51" y="8" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-uk-kFJ">
+                    <rect key="frame" x="17" y="44" width="77" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="-57" minY="58" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="12" minY="-25" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="摄像头" image="mh_sxt.png">
+                        <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mh_sxt_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="RjF-fZ-nEK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-5n-63J">
+                    <rect key="frame" x="127" y="44" width="77" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="-57" minY="58" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="12" minY="-25" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="烟感" image="mh_yang.png">
+                        <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mh_yang_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="Es8-U6-Zn1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="712.5" y="434"/>
         </view>
     </objects>
     <resources>
         <image name="mh_bg.png" width="320" height="568"/>
         <image name="mh_clw.png" width="80" height="80"/>
+        <image name="mh_clw_select.png" width="80" height="80"/>
+        <image name="mh_dioagbg.png" width="216" height="142"/>
+        <image name="mh_jsx.png" width="55" height="55"/>
+        <image name="mh_jsx_select.png" width="55" height="55"/>
         <image name="mh_jtaf.png" width="80" height="79"/>
         <image name="mh_jtaf_select.png" width="80" height="79"/>
         <image name="mh_jtyl.png" width="80" height="79"/>
         <image name="mh_jtyl_select.png" width="80" height="79"/>
         <image name="mh_kcd.png" width="80" height="80"/>
         <image name="mh_kcd_select.png" width="80" height="80"/>
+        <image name="mh_mbh.png" width="55" height="55"/>
+        <image name="mh_mbh_select.png" width="55" height="55"/>
+        <image name="mh_sxt.png" width="55" height="55"/>
+        <image name="mh_sxt_select.png" width="55" height="55"/>
+        <image name="mh_yang.png" width="55" height="55"/>
+        <image name="mh_yang_select.png" width="55" height="55"/>
     </resources>
 </document>

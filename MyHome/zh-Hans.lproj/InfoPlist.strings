@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleDisplayName = "和我家";
+CFBundleName = "和我家";
+
+"return" = "返回";

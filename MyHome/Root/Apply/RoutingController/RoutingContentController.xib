@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoutingContentController">
+            <connections>
+                <outlet property="bgView" destination="DzJ-jM-DvE" id="uTG-Sp-phV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="XnL-gK-hAq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_content.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-x9-U4y">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="l49-Ja-iPz">
+                    <rect key="frame" x="0.0" y="0.0" width="158" height="320"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azc-oC-I48">
+                    <rect key="frame" x="40" y="19" width="79" height="73"/>
+                    <state key="normal" image="rt_two.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="rt_two_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="yqx-Cd-vy6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGy-bi-yQq">
+                    <rect key="frame" x="40" y="123" width="79" height="73"/>
+                    <state key="normal" image="rt_two01.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="rt_two01_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="84T-M8-L53"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sce-7d-5H1">
+                    <rect key="frame" x="40" y="229" width="79" height="73"/>
+                    <state key="normal" image="rt_two02.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="rt_two02_select.png"/>
+                    <connections>
+                        <action selector="onTypeClick:" destination="-1" eventType="touchUpInside" id="N3K-kI-IJQ"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_content_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="aVD-3n-xYN">
+                    <rect key="frame" x="166" y="13" width="316" height="294"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DzJ-jM-DvE">
+                    <rect key="frame" x="166" y="13" width="316" height="294"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-Z4-6oa">
+                    <rect key="frame" x="504" y="25" width="53" height="30"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.49019607843137253" green="0.9137254901960784" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onCancel:" destination="-1" eventType="touchUpInside" id="eTm-5r-GIf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="das-36-nIV">
+                    <rect key="frame" x="510" y="186" width="41" height="40"/>
+                    <state key="normal" image="rt_add.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSelectAdd:" destination="-1" eventType="touchUpInside" id="Amt-qN-bb3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-A8-oJj">
+                    <rect key="frame" x="510" y="243" width="41" height="40"/>
+                    <state key="normal" image="rt_select.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSelectAdd:" destination="-1" eventType="touchUpInside" id="cGa-zX-1n4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rt_add.png" width="41" height="40"/>
+        <image name="rt_content.png" width="568" height="320"/>
+        <image name="rt_content_bg.png" width="316" height="294"/>
+        <image name="rt_play.png" width="158" height="320"/>
+        <image name="rt_select.png" width="41" height="40"/>
+        <image name="rt_two.png" width="79" height="73"/>
+        <image name="rt_two01.png" width="79" height="73"/>
+        <image name="rt_two01_select.png" width="79" height="73"/>
+        <image name="rt_two02.png" width="79" height="73"/>
+        <image name="rt_two02_select.png" width="79" height="73"/>
+        <image name="rt_two_select.png" width="79" height="73"/>
+    </resources>
+</document>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayViewController">
+            <connections>
+                <outlet property="LblProgress" destination="21" id="22"/>
+                <outlet property="imageDown" destination="141" id="142"/>
+                <outlet property="imageLeft" destination="139" id="143"/>
+                <outlet property="imageRight" destination="140" id="144"/>
+                <outlet property="imageUp" destination="138" id="145"/>
+                <outlet property="imgView" destination="3" id="57"/>
+                <outlet property="labelNetworkSpeed" destination="157" id="158"/>
+                <outlet property="labelRecord" destination="155" id="156"/>
+                <outlet property="playToolBar" destination="73" id="98"/>
+                <outlet property="progressView" destination="26" id="28"/>
+                <outlet property="timeoutLabel" destination="66" id="67"/>
+                <outlet property="toolBarTop" destination="71" id="97"/>
+                <outlet property="view" destination="1" id="5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.1048110651" green="0.1048110651" blue="0.1048110651" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="connecting..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="21">
+                    <rect key="frame" x="163" y="164" width="255" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.89949898100000003" green="0.89949898100000003" blue="0.89949898100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="26">
+                    <rect key="frame" x="271" y="127" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="66">
+                    <rect key="frame" x="263" y="248" width="201" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.95998216709999995" green="0.36283269620000003" blue="0.097984713929999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.69999998807907104" contentMode="scaleToFill" id="71">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <barButtonItem image="vert_tour.png" id="78"/>
+                        <barButtonItem image="hori_tour.png" id="79"/>
+                        <barButtonItem image="more.png" id="151"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="88"/>
+                        <barButtonItem title="Item" width="160" style="plain" id="87"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="86"/>
+                        <barButtonItem image="hori_mirror.png" id="84"/>
+                        <barButtonItem image="vert_mirror.png" id="85"/>
+                        <barButtonItem systemItem="stop" id="100"/>
+                    </items>
+                </toolbar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.69999998807907104" contentMode="scaleToFill" id="73">
+                    <rect key="frame" x="-1" y="276" width="568" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem image="takepic.png" id="74"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="147"/>
+                        <barButtonItem image="record.png" id="146"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="134"/>
+                        <barButtonItem image="audio.png" id="75"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="91"/>
+                        <barButtonItem image="contrast_sw.png" id="77"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="92"/>
+                        <barButtonItem image="brightness_pressed.png" id="80"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="93"/>
+                        <barButtonItem image="ptz_default_set_pressed.png" id="81"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="94"/>
+                        <barButtonItem image="ng.png" id="82"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="96"/>
+                        <barButtonItem image="ptz_playmode_enlarge.png" id="95"/>
+                    </items>
+                </toolbar>
+                <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="up.png" id="138">
+                    <rect key="frame" x="258" y="62" width="65" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="left.png" id="139">
+                    <rect key="frame" x="181" y="124" width="55" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="right.png" id="140">
+                    <rect key="frame" x="349" y="124" width="55" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="down.png" id="141">
+                    <rect key="frame" x="258" y="197" width="65" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="155">
+                    <rect key="frame" x="342" y="59" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.95998216709999995" green="0.36283269620000003" blue="0.097984713929999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="157">
+                    <rect key="frame" x="13" y="243" width="153" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="audio.png" width="64" height="64"/>
+        <image name="brightness_pressed.png" width="20" height="20"/>
+        <image name="contrast_sw.png" width="20" height="20"/>
+        <image name="down.png" width="96" height="96"/>
+        <image name="hori_mirror.png" width="20" height="20"/>
+        <image name="hori_tour.png" width="20" height="20"/>
+        <image name="left.png" width="96" height="96"/>
+        <image name="more.png" width="20" height="20"/>
+        <image name="ng.png" width="20" height="20"/>
+        <image name="ptz_default_set_pressed.png" width="20" height="20"/>
+        <image name="ptz_playmode_enlarge.png" width="20" height="20"/>
+        <image name="record.png" width="64" height="64"/>
+        <image name="right.png" width="96" height="96"/>
+        <image name="takepic.png" width="20" height="20"/>
+        <image name="up.png" width="96" height="96"/>
+        <image name="vert_mirror.png" width="20" height="20"/>
+        <image name="vert_tour.png" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

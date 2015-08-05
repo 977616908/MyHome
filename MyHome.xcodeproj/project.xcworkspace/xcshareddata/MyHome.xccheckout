@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>552EC111-D613-4CA8-9B65-02E8A7DCE612</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyHome</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++4864</key>
+		<string>https://192.168.1.110:8443/svn/pifii/trunk/iOSApp/MyHome</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyHome.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++4864</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++4864</key>
+		<string>https://192.168.1.110:8443/svn/pifii</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://192.168.1.110:8443/svn/pifii/trunk/iOSApp/MyHome/MyHome.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c8e3788e-d625-974c-b7d9-5bcda14c0d74++4864</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c8e3788e-d625-974c-b7d9-5bcda14c0d74++4864</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyHome</string>
+		</dict>
+	</array>
+</dict>
+</plist>

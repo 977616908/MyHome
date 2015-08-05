@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4FB0E730-0230-4C35-B387-D63B67C407DF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WoPiFii</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++585</key>
+		<string>https://192.168.1.110:8443/svn/pifii/trunk/iOSApp/WoPiFii</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WoPiFii.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++585</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>c8e3788e-d625-974c-b7d9-5bcda14c0d74++585</key>
+		<string>https://192.168.1.110:8443/svn/pifii</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://192.168.1.110:8443/svn/pifii/trunk/iOSApp/WoPiFii/WoPiFii.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c8e3788e-d625-974c-b7d9-5bcda14c0d74++585</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c8e3788e-d625-974c-b7d9-5bcda14c0d74++585</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WoPiFii</string>
+		</dict>
+	</array>
+</dict>
+</plist>

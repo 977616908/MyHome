@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="WAe-n7-BzE" customClass="WgView">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="224"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-pg-VNs">
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="225"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_wline.png" translatesAutoresizingMaskIntoConstraints="NO" id="uFi-M1-Dn1">
+                            <rect key="frame" x="25" y="19" width="180" height="1"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_dian.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-HC-To1">
+                            <rect key="frame" x="25" y="25" width="4" height="4"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-Iy-UAC">
+                            <rect key="frame" x="25" y="35" width="180" height="145"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_test00.png" translatesAutoresizingMaskIntoConstraints="NO" id="9HN-yz-ChE">
+                                    <rect key="frame" x="0.0" y="12" width="180" height="121"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015-06-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-AM-HqC">
+                            <rect key="frame" x="33" y="21" width="136" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击文字编辑" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-Zm-856">
+                            <rect key="frame" x="25" y="180" width="180" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="OSm-pg-VNs" id="XWT-bS-EeK"/>
+                <outlet property="imgIcon" destination="9HN-yz-ChE" id="35G-9P-Pcc"/>
+                <outlet property="imgView" destination="Lta-Iy-UAC" id="POW-sg-7XA"/>
+                <outlet property="lbDate" destination="YkI-AM-HqC" id="Hkm-1E-FlN"/>
+                <outlet property="lbTitle" destination="gfW-Zm-856" id="AYx-rT-hn9"/>
+            </connections>
+            <point key="canvasLocation" x="265" y="112"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7u7-hm-nY6" customClass="HgView">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="225"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0y-fD-K2O">
+                    <rect key="frame" x="20" y="0.0" width="230" height="225"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_hline.png" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-Y1-PWH">
+                            <rect key="frame" x="18" y="11" width="123" height="1"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_dian.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-X4-Ytx">
+                            <rect key="frame" x="18" y="15" width="4" height="4"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015-06-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-Yp-hiW">
+                            <rect key="frame" x="26" y="11" width="136" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PaZ-xd-SN1">
+                            <rect key="frame" x="18" y="26" width="144" height="186"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_test01.png" translatesAutoresizingMaskIntoConstraints="NO" id="B79-5q-mWn">
+                                    <rect key="frame" x="3" y="0.0" width="125" height="185"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击文字编辑" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Ub-eHX">
+                            <rect key="frame" x="167" y="26" width="42" height="186"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="k0y-fD-K2O" id="lPq-hv-QKt"/>
+                <outlet property="imgIcon" destination="B79-5q-mWn" id="wr4-2y-kjC"/>
+                <outlet property="imgView" destination="PaZ-xd-SN1" id="UKX-Si-KAk"/>
+                <outlet property="lbDate" destination="ktR-Yp-hiW" id="Edj-VK-qf5"/>
+                <outlet property="lbTitle" destination="rz1-Ub-eHX" id="ehH-ed-1P4"/>
+            </connections>
+            <point key="canvasLocation" x="623" y="117.5"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nXk-Gf-rXI" customClass="WgView">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="184"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obg-DG-Np3">
+                    <rect key="frame" x="0.0" y="0.0" width="196" height="184"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_wline.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rq6-6d-zyp">
+                            <rect key="frame" x="15" y="10" width="162" height="1"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_dian.png" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-qo-Tcy">
+                            <rect key="frame" x="15" y="15" width="4" height="4"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fkj-1T-6ej">
+                            <rect key="frame" x="15" y="19" width="162" height="130"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_test00.png" translatesAutoresizingMaskIntoConstraints="NO" id="aLf-Yo-iCa">
+                                    <rect key="frame" x="0.0" y="11" width="162" height="108"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015-06-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ES4-bG-Hrn">
+                            <rect key="frame" x="23" y="11" width="136" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击文字编辑" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-Us-hWb">
+                            <rect key="frame" x="15" y="150" width="162" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="obg-DG-Np3" id="Z1T-sr-pdz"/>
+                <outlet property="imgIcon" destination="aLf-Yo-iCa" id="XMh-LJ-T0m"/>
+                <outlet property="imgView" destination="Fkj-1T-6ej" id="MZU-bK-hhn"/>
+                <outlet property="lbDate" destination="ES4-bG-Hrn" id="YeP-M0-oeY"/>
+                <outlet property="lbTitle" destination="EC2-Us-hWb" id="GlA-mV-kA6"/>
+            </connections>
+            <point key="canvasLocation" x="282.5" y="418"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iXr-2q-Wwh" customClass="HgView">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="184"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wA2-aF-Y39">
+                    <rect key="frame" x="15" y="0.0" width="196" height="184"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_hline.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-AL-mgN">
+                            <rect key="frame" x="17" y="6" width="106" height="1"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_dian.png" translatesAutoresizingMaskIntoConstraints="NO" id="owh-HB-VL7">
+                            <rect key="frame" x="17" y="10" width="4" height="4"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015-06-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4U-Ij-ssf">
+                            <rect key="frame" x="25" y="6" width="136" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QK8-RK-7hD">
+                            <rect key="frame" x="17" y="18" width="118" height="166"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rt_test01.png" translatesAutoresizingMaskIntoConstraints="NO" id="L7i-dH-f4T">
+                                    <rect key="frame" x="0.0" y="0.0" width="106" height="158"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击文字编辑" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-iI-ePI">
+                            <rect key="frame" x="139" y="18" width="42" height="158"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            <color key="textColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="wA2-aF-Y39" id="Lb7-Me-v8w"/>
+                <outlet property="imgIcon" destination="L7i-dH-f4T" id="yjb-gS-QXg"/>
+                <outlet property="imgView" destination="QK8-RK-7hD" id="NOd-Tv-JrS"/>
+                <outlet property="lbDate" destination="y4U-Ij-ssf" id="kMf-t5-lTy"/>
+                <outlet property="lbTitle" destination="aXo-iI-ePI" id="jiH-W6-fmK"/>
+            </connections>
+            <point key="canvasLocation" x="627.5" y="417"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rt_dian.png" width="3" height="3"/>
+        <image name="rt_hline.png" width="123" height="1"/>
+        <image name="rt_test00.png" width="199" height="132"/>
+        <image name="rt_test01.png" width="141" height="212"/>
+        <image name="rt_wline.png" width="179" height="1"/>
+    </resources>
+</document>

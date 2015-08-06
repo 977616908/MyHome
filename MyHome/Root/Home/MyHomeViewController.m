@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) IBOutlet UIView *bgSave;
 
+@property (weak,nonatomic) IBOutlet UIScrollView *rootScrollView;
+
 - (IBAction)onHomeClick:(id)sender;
 
 - (IBAction)onTypeClick:(id)sender;
@@ -32,6 +34,8 @@
 
 -(void)coustomNav{
     self.navigationItem.title=@"家庭应用";
+    self.rootScrollView.showsVerticalScrollIndicator=NO;
+    self.rootScrollView.contentSize=CGSizeMake(0, 480);
 //    CCButton *sendBut = CCButtonCreateWithValue(CGRectMake(10, 0, 30, 20), @selector(onAddClick:), self);
 //    sendBut.tag=1;
 //    [sendBut setImage:[UIImage imageNamed:@"hm_add"] forState:UIControlStateNormal];

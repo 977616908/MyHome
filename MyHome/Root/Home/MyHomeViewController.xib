@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="bgFun" destination="5CS-2R-qMk" id="LaY-6h-RBK"/>
                 <outlet property="bgSave" destination="xOk-fW-Hnv" id="Yll-yA-qkF"/>
+                <outlet property="rootScrollView" destination="Y2y-W5-8t2" id="9pg-mQ-aVo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

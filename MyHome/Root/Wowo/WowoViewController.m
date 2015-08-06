@@ -15,7 +15,9 @@
 #import "ScannerViewController.h"
 #import "WoSetViewController.h"
 #import "RoutingFootprintController.h"
+#import "ChannelSetViewController.h"
 #import "WoUser.h"
+#import "AccessDeviceViewController.h"
 #import <ShareSDK/ShareSDK.h>
 
 #define BUTTONHEIGHT 75
@@ -50,12 +52,25 @@
     [super viewDidLoad];
     _arrTitle=@[@{@"icon":@"hm_sgly",@"title":@"时光路游"},
                 @{@"icon":@"hm_tjgpy",@"title":@"推荐给朋友"},
-                @{@"icon":@"hm_shezhi",@"title":@"设置"}];
+                @{@"icon":@"mh_wifii",@"title":@"信道"},
+                @{@"icon":@"mh_person",@"title":@"访客"},
+                @{@"icon":@"mh_refresh",@"title":@"限速"}];
     isMacBounds=[GlobalShare isBindMac];
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self getRequestUser];
+}
+
 -(void)coustomNav{
+    
+    CCButton *btnSet = CCButtonCreateWithValue(CGRectMake(0, 0, 30,20), @selector(onSetClick:), self);
+    [btnSet setImage:[UIImage imageNamed:@"mh_set"] forState:UIControlStateNormal];
+//    [btnSet setImage:[UIImage imageNamed:@"hm_shangchuan_select"] forState:UIControlStateSelected];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btnSet];
+    
     CGFloat gh=44+50;
     if(is_iOS7()){
         gh+=20;
@@ -103,9 +118,10 @@
     return bgView;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self getRequestUser];
+
+-(void)onSetClick:(id)sendar{
+    WoSetViewController *setController=[[WoSetViewController alloc]init];
+    [self.navigationController pushViewController:setController animated:YES];
 }
 
 -(void)onWoClick:(id)sendar{
@@ -226,9 +242,18 @@
             case 1://分享
                 [self shareSDK];
                 break;
-            case 2:{
-                WoSetViewController *setController=[[WoSetViewController alloc]init];
+            case 2:{ //信道
+                ChannelSetViewController *setController=[[ChannelSetViewController alloc]init];
                 [self.navigationController pushViewController:setController animated:YES];
+            }
+                break;
+            case 3:{ //访客
+                AccessDeviceViewController *deviceController=[[AccessDeviceViewController alloc]init];
+                [self.navigationController pushViewController:deviceController animated:YES];
+            }
+                break;
+            case 4:{ //限速
+                
             }
                 break;
             default:
@@ -473,9 +498,9 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if(ScreenHeight()>480){
         if (section==0) {
-            return 10.0f;
+            return 5.0f;
         }else{
-            return 15.0f;
+            return 2.0f;
         }
     }else{
         return 0.5f;

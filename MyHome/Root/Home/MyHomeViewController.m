@@ -71,7 +71,7 @@
 
 - (void)alertAction:(UIView *)alertView {
     CGRect rect =  alertView.frame;
-    rect.origin = CGPointMake((XL_ScreenWidth-rect.size.width)/2.0,( XL_ScreenHeight - rect.size.height)/3.0);
+    rect.origin = CGPointMake((XL_ScreenWidth-rect.size.width)/2.0,( XL_ScreenHeight - rect.size.height)/2.0);
 
     alertView.frame = rect;
     [GlobalShare addSubViewToAlertWindowAndShow:alertView];

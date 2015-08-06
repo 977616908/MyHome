@@ -40,6 +40,7 @@
 
 
 -(void)setArrayList:(NSArray *)arrayList{
+    _arrayList=arrayList;
     [arrContent removeAllObjects];
     [arrContent addObjectsFromArray:arrayList];
     [_tableView reloadData];

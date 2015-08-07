@@ -99,7 +99,7 @@
     [self.view addSubview:scrollView];
     
     PhotosView *photosView = [[PhotosView alloc] init];
-//    photosView.isAdd=YES;
+    photosView.isAdd=YES;
     photosView.frame = CGRectMake(0, 0, CGRectGetWidth(self.rootScrollView.frame), CGRectGetHeight(self.rootScrollView.frame));
     self.photosView = photosView;
     photosView.delegate=self;

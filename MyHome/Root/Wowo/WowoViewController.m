@@ -436,7 +436,7 @@
     }else{
         NSNumber *returnCode=[response objectForKey:@"returnCode"];
         if ([returnCode intValue]==200) {
-            NSDictionary *data=response[@"Data"];
+            NSDictionary *data=response[@"data"];
             if (data.count>0) {
                 WoUser *user=[[WoUser alloc]initWithData:data];
                 self.user=user;

@@ -86,7 +86,7 @@
     // 1.时光游
     RoutingTimeController *time = [[RoutingTimeController alloc] init];
     time.barView=self.customTabBar;
-    [self setupChildViewController:time title:@"时光游" imageName:@"hm_sgy" selectedImageName:@"hm_sgy_selected"];
+    [self setupChildViewController:time title:@"和我家" imageName:@"hm_sgy" selectedImageName:@"hm_sgy_selected"];
     
     // 2.应用
     MyHomeViewController *myHome = [[MyHomeViewController alloc] init];

@@ -70,7 +70,7 @@ typedef enum{
 
 
 -(void)coustomNav{
-    self.navigationItem.title=@"时光路游";
+//    self.navigationItem.title=@"时光路游";
     CCButton *sendBut = CCButtonCreateWithValue(CGRectMake(10, 0, 30,25), @selector(onCameraClick:), self);
     sendBut.tag=1;
     [sendBut setImage:[UIImage imageNamed:@"hm_shangchuan"] forState:UIControlStateNormal];

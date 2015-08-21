@@ -11,6 +11,8 @@
 #import "WFXDeviceFinder.h"
 #import "SemiAsyncDispatcher.h"
 #import "PiFiiBaseTabBarController.h"
+#import "LoginRegisterController.h"
+#import "PiFiiBaseNavigationController.h"
 
 #import <ShareSDK/ShareSDK.h>
 #import "WeiboApi.h"
@@ -18,6 +20,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
+
 
 @implementation PiFiiAppDelegate
 
@@ -39,21 +42,29 @@
    
     self.routerConnectionMode = RouterConnectionModeLocal;// 接连路由器方式
     [self shareSDK];
-//    [self serverInfo];
-//    [self requestMacForIP];
-//    [self requestTokenOfRouting];
-//    [self requestSaveBindMac];
-    [NSThread sleepForTimeInterval:1];
+    //    [self serverInfo];
+    //    [self requestMacForIP];
+    //    [self requestTokenOfRouting];
+    //    [self requestSaveBindMac];
+    //    [NSThread sleepForTimeInterval:1];
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-   
-    PiFiiBaseTabBarController *tab=[[PiFiiBaseTabBarController alloc]init];
-    self.window.rootViewController = tab;
+    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+    BOOL isLogin = [[userDefaultes objectForKey:ISLOGIN] boolValue];
+    if (!isLogin){
+        //推入
+        LoginRegisterController *loginController=[[LoginRegisterController alloc]init];
+        PiFiiBaseNavigationController *navController=[[PiFiiBaseNavigationController alloc]initWithRootViewController:loginController];
+        self.window.rootViewController=navController;
+    }else{
+        PiFiiBaseTabBarController *tabController=[[PiFiiBaseTabBarController alloc]init];
+        self.window.rootViewController = tabController;
+    }
+    
     
     application.statusBarStyle = UIStatusBarStyleLightContent;
-//    self.window.backgroundColor = @"hm_bg".colorInstance;
+    //    self.window.backgroundColor = @"hm_bg".colorInstance;
     self.window.backgroundColor=RGBCommon(2, 137, 193);
     [self.window makeKeyAndVisible];
-    
 //     [self loadReveal];
     
     return YES;

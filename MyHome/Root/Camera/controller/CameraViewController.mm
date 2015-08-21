@@ -15,6 +15,7 @@
 #import "PPPPChannelManagement.h"
 #import "WifiParamsProtocol.h"
 #import "PPPPDefine.h"
+#import "AppleStatue.h"
 
 @interface CameraViewController ()<ScannerMacDelegate,SearchAddCameraInfoProtocol,WifiParamsProtocol>{
     CGFloat downloadedBytes;
@@ -46,43 +47,44 @@
 
 -(void)createNav{
     self.view.backgroundColor=RGBCommon(63, 205, 225);
-    CGFloat gh=-20;
+    CGFloat gh=0;
     if (is_iOS7()) {
         gh=20;
     }
+    PSLog(@"%f",CGRectGetHeight(self.view.frame));
     CGRect bgRect=CGRectMake(0, gh, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-gh);
     CCScrollView *rootScrollView=CCScrollViewCreateNoneIndicatorWithFrame(bgRect, nil, NO);
     rootScrollView.backgroundColor=[UIColor whiteColor];
     rootScrollView.contentSize=CGSizeMake(0, 568-gh);
     [self.view addSubview:rootScrollView];
-    UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(rootScrollView.frame), CGRectGetHeight(rootScrollView.frame))];
-
-    [rootScrollView addSubview:bgView];
-    CGFloat hg=0;
+    //    UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(rootScrollView.frame), CGRectGetHeight(rootScrollView.frame))];
+    //
+    //    [rootScrollView addSubview:bgView];
+    CGFloat hg=-20;
     if(ScreenHeight()<=480){
-        hg-=15;
+        hg-=5;
     }
     CCView *navTopView = [CCView createWithFrame:CGRectMake(0, hg, 80, 44) backgroundColor:[UIColor clearColor]];
     CCButton *btnBack=CCButtonCreateWithValue(CGRectMake(10, 0, 60, 44), @selector(exitCurrentController), self);
     [btnBack setImage:[UIImage imageNamed:@"hm_return"] forState:UIControlStateNormal];
     btnBack.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
     [navTopView addSubview:btnBack];
-    [bgView addSubview:navTopView];
+    [rootScrollView addSubview:navTopView];
     
     
-    CCLabel *title=CCLabelCreateWithNewValue(@"连接智能摄像头", 16, CGRectMake(0,CGRectGetMaxY(navTopView.frame)+10+hg,CGRectGetWidth(bgView.frame),16));
+    CCLabel *title=CCLabelCreateWithNewValue(@"连接智能摄像头", 16, CGRectMake(0,CGRectGetMaxY(navTopView.frame)+10+hg,CGRectGetWidth(rootScrollView.frame),16));
     title.textColor=RGBCommon(63, 205, 225);
     title.textAlignment=NSTextAlignmentCenter;
-    [bgView addSubview:title];
+    [rootScrollView addSubview:title];
     
-    CCLabel *msg=CCLabelCreateWithNewValue(@"接通电源，设备指示灯闪烁时点击下一步", 13, CGRectMake(0,CGRectGetMaxY(title.frame)+10,CGRectGetWidth(bgView.frame),14));
+    CCLabel *msg=CCLabelCreateWithNewValue(@"接通电源，设备指示灯闪 烁时点击下一步", 13, CGRectMake(0,CGRectGetMaxY(title.frame)+10,CGRectGetWidth(rootScrollView.frame),14));
     msg.textColor=RGBCommon(155, 155, 155);
     msg.textAlignment=NSTextAlignmentCenter;
     self.lbMsg=msg;
-    [bgView addSubview:msg];
+    [rootScrollView addSubview:msg];
     
     CCImageView *img=CCImageViewCreateWithNewValue(@"hm_camera", CGRectMake(132,CGRectGetMaxY(msg.frame)+60, 56, 76));
-    [bgView addSubview:img];
+    [rootScrollView addSubview:img];
     
     PFDownloadIndicator *downIndicator = [[PFDownloadIndicator alloc]initWithFrame:CGRectMake(90, CGRectGetMaxY(msg.frame)+30, 140, 140) type:kRMClosedIndicator];
     [downIndicator setBackgroundColor:[UIColor clearColor]];
@@ -91,16 +93,16 @@
     downIndicator.radiusPercent = 0.45;
     
     self.downIndicator=downIndicator;
-//    downIndicator.hidden=YES;
-    [bgView addSubview:downIndicator];
+    //    downIndicator.hidden=YES;
+    [rootScrollView addSubview:downIndicator];
     [downIndicator loadIndicator];
     
-    CCLabel *downMsg=CCLabelCreateWithNewValue(@"正在为您下载模板中...", 15, CGRectMake(0,CGRectGetMaxY(downIndicator.frame)-10,CGRectGetWidth(bgView.frame),15));
+    CCLabel *downMsg=CCLabelCreateWithNewValue(@"正在为您下载模板中...", 15, CGRectMake(0,CGRectGetMaxY(downIndicator.frame)+10,CGRectGetWidth(rootScrollView.frame),15));
     downMsg.textColor=RGBCommon(123, 123, 123);
     downMsg.textAlignment=NSTextAlignmentCenter;
     self.downMsg=downMsg;
-    downMsg.hidden=YES;
-    [bgView addSubview:downMsg];
+    //    downMsg.hidden=YES;
+    [rootScrollView addSubview:downMsg];
     
     UIView *stepView=[[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(downMsg.frame), 320, 150)];
     CCImageView *imgConn=CCImageViewCreateWithNewValue(@"hm_camera_conn", CGRectMake(20, 0, 320, 150));
@@ -121,23 +123,23 @@
         [stepView addSubview:btn];
         [arrSteps addObject:btn];
     }
-    [bgView addSubview:stepView];
+    [rootScrollView addSubview:stepView];
     
-    CCButton *btnStart=CCButtonCreateWithValue(CGRectMake(20, CGRectGetMaxY(stepView.frame)+5, CGRectGetWidth(bgView.frame)-40, 42), @selector(onTypeClick:), self);
+    CCButton *btnStart=CCButtonCreateWithValue(CGRectMake(20, CGRectGetMaxY(stepView.frame)+5, CGRectGetWidth(rootScrollView.frame)-40, 42), @selector(onTypeClick:), self);
     btnStart.backgroundColor=RGBCommon(63, 205, 225);
     btnStart.tag=1;
     [btnStart alterFontSize:20];
     [btnStart alterNormalTitle:@"扫描二维码"];
     self.btnStart=btnStart;
-    [bgView addSubview:btnStart];
+    [rootScrollView addSubview:btnStart];
     
-    CCButton *btnSearch=CCButtonCreateWithValue(CGRectMake(20, CGRectGetMaxY(btnStart.frame)+10, CGRectGetWidth(bgView.frame)-40, 42), @selector(onTypeClick:), self);
+    CCButton *btnSearch=CCButtonCreateWithValue(CGRectMake(20, CGRectGetMaxY(btnStart.frame)+10, CGRectGetWidth(rootScrollView.frame)-40, 42), @selector(onTypeClick:), self);
     btnSearch.backgroundColor=RGBCommon(63, 205, 225);
     btnSearch.tag=2;
     [btnSearch alterFontSize:20];
     [btnSearch alterNormalTitle:@"局域网搜索"];
     self.btnSearch=btnSearch;
-    [bgView addSubview:btnSearch];
+    [rootScrollView addSubview:btnSearch];
     
     
     self.cameraMsg=[[CameraMessage alloc]init];
@@ -147,7 +149,6 @@
     m_pPPPPChannelMgt->pCameraViewController=self;
     
 }
-
 
 
 
@@ -409,7 +410,12 @@
         timer=nil;
         self.btnStart.enabled=YES;
         _downMsg.text=@"摄像头连接成功";
-        [self.pifiiDelegate pushViewDataSource:@(0)];
+        AppleStatue *statue=[[AppleStatue alloc]init];
+        statue.appIcon=@"mh_sxtt";
+        statue.appTitle=@"家用摄像头";
+        statue.appTag=1;
+        statue.appMsg=@"在线";
+        [self.pifiiDelegate pushViewDataSource:statue];
         [self performSelector:@selector(exitCurrentController) withObject:nil afterDelay:0.7];
     }
 }

@@ -10,13 +10,13 @@
 #import <Foundation/Foundation.h>
 
 
-NSString *pathInDocumentDirectory(NSString *fileName);
-NSString *pathInCacheDirectory(NSString *fileName);
-NSString *pathForURL(NSURL *aURL);
-BOOL hasCachedImage(NSURL *aURL);
-NSString *hashCodeForURL(NSURL *aURL);
+FOUNDATION_EXPORT NSString *pathInDocumentDirectory(NSString *fileName);
+FOUNDATION_EXPORT NSString *pathInCacheDirectory(NSString *fileName);
+FOUNDATION_EXPORT NSString *pathForURL(NSURL *aURL);
+FOUNDATION_EXPORT BOOL hasCachedImage(NSURL *aURL);
+FOUNDATION_EXPORT NSString *hashCodeForURL(NSURL *aURL);
 
 
-NSString *pathForString(NSString *aString);
-BOOL hasCachedImageWithString(NSString *aURL);
-NSString *hashCodeForString(NSString *aURL);
+FOUNDATION_EXPORT NSString *pathForString(NSString *aString);
+FOUNDATION_EXPORT BOOL hasCachedImageWithString(NSString *aURL);
+FOUNDATION_EXPORT NSString *hashCodeForString(NSString *aURL);

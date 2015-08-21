@@ -174,7 +174,7 @@
     if (section==0) {
         return 1;
     }else if(section==1){
-        return 1;
+        return 0;
     }else{
         return _arrTitle.count;
     }
@@ -197,7 +197,6 @@
             cell.accessoryView.hidden=YES;
         //        [cell insertSubview:[self createButtonView:cell.frame] atIndex:0];
             [cell addSubview:[self createButtonView:cell.frame]];
-            cell.hidden=YES;
         }else{
             NSDictionary *param=_arrTitle[indexPath.row];
             if (indexPath.row==0) {
@@ -489,8 +488,7 @@
     if (section==0) {
         return 80.0f;
     }else if(section==1){
-//        return 105.0f;
-        return 0.5;
+        return 105.0f;
     }else{
         return 44.0f;
     }

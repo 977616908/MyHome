@@ -10,7 +10,7 @@
 #import "CCTabBar.h"
 #import "PiFiiBaseNavigationController.h"
 #import "RoutingTimeController.h"
-//#import "ApplyViewController.h"
+#import "ApplyViewController.h"
 #import "MyHomeViewController.h"
 #import "WowoViewController.h"
 
@@ -84,13 +84,13 @@
 - (void)setupAllChildViewControllers
 {
     // 1.时光游
-    RoutingTimeController *time = [[RoutingTimeController alloc] init];
-    time.barView=self.customTabBar;
+    ApplyViewController *time = [[ApplyViewController alloc] init];
+//    time.barView=self.customTabBar;
     [self setupChildViewController:time title:@"和我家" imageName:@"hm_sgy" selectedImageName:@"hm_sgy_selected"];
     
     // 2.应用
     MyHomeViewController *myHome = [[MyHomeViewController alloc] init];
-    [self setupChildViewController:myHome title:@"家庭应用" imageName:@"hm_yyon" selectedImageName:@"hm_yyon_selected"];
+    [self setupChildViewController:myHome title:@"商城" imageName:@"hm_yyon" selectedImageName:@"hm_yyon_selected"];
     
     // 3.我
     WowoViewController *wo = [[WowoViewController alloc] init];

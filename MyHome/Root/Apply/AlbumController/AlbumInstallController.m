@@ -8,6 +8,7 @@
 
 #import "AlbumInstallController.h"
 #import "PFDownloadIndicator.h"
+#import "AppleStatue.h"
 
 
 @interface AlbumInstallController (){
@@ -123,7 +124,12 @@
         timer=nil;
         self.btnStart.enabled=YES;
         _downMsg.text=@"制作成功";
-        [self.pifiiDelegate pushViewDataSource:@(2)];
+        AppleStatue *statue=[[AppleStatue alloc]init];
+        statue.appIcon=@"mh_sjxc";
+        statue.appMsg=@"把照片串成记忆的画册，捧在手心里永久珍藏";
+        statue.appTitle=@"时光相册";
+        statue.appTag=3;
+        [self.pifiiDelegate pushViewDataSource:statue];
         [self performSelector:@selector(exitCurrentController) withObject:nil afterDelay:0.7];
     }
 }

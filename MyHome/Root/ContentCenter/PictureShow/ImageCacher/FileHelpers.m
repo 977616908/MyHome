@@ -9,7 +9,7 @@
 #import "FileHelpers.h"
 
 
-NSString *pathInDocumentDirectory(NSString *fileName){
+FOUNDATION_EXPORT NSString *pathInDocumentDirectory(NSString *fileName){
     
     //获取沙盒中的文档目录
     NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -21,7 +21,7 @@ NSString *pathInDocumentDirectory(NSString *fileName){
 }
 
 
-NSString *pathInCacheDirectory(NSString *fileName){
+FOUNDATION_EXPORT NSString *pathInCacheDirectory(NSString *fileName){
     //获取沙盒中缓存文件目录
     NSString *cacheDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
     
@@ -32,16 +32,16 @@ NSString *pathInCacheDirectory(NSString *fileName){
 
 
 //根据URL的hash码为图片文件命名
-NSString *pathForURL(NSURL *aURL){
+FOUNDATION_EXPORT NSString *pathForURL(NSURL *aURL){
     return pathInCacheDirectory([NSString stringWithFormat:@"com.pifii/cachedImage-%u", [[aURL description] hash]]);
 }
 
-NSString *pathForString(NSString *aString){
+FOUNDATION_EXPORT NSString *pathForString(NSString *aString){
    return pathInCacheDirectory([NSString stringWithFormat:@"com.pifii/cachedImage-%u", [aString hash]]);
 }
 
 //判断是否已经缓存过这个URL
-BOOL hasCachedImage(NSURL *aURL){
+FOUNDATION_EXPORT BOOL hasCachedImage(NSURL *aURL){
     
 NSFileManager *fileManager=[NSFileManager defaultManager];
     
@@ -53,7 +53,7 @@ else return NO;
 }
 
 
-BOOL hasCachedImageWithString(NSString *aURL){
+FOUNDATION_EXPORT BOOL hasCachedImageWithString(NSString *aURL){
     NSFileManager *fileManager=[NSFileManager defaultManager];
     
     if ([fileManager fileExistsAtPath:pathForString(aURL)]) {
@@ -62,12 +62,12 @@ BOOL hasCachedImageWithString(NSString *aURL){
     else return NO;
 }
 
-NSString *hashCodeForURL(NSURL *aURL)
+FOUNDATION_EXPORT NSString *hashCodeForURL(NSURL *aURL)
 {
     return [NSString stringWithFormat:@"%u",[[aURL description]hash]];
 }
 
-NSString *hashCodeForString(NSString *aURL){
+FOUNDATION_EXPORT NSString *hashCodeForString(NSString *aURL){
     return [NSString stringWithFormat:@"%u",[aURL hash]];
 }
 

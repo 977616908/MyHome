@@ -33,7 +33,7 @@
 }
 
 -(void)coustomNav{
-    self.navigationItem.title=@"家庭应用";
+//    self.navigationItem.title=@"家庭应用";
     self.rootScrollView.showsVerticalScrollIndicator=NO;
     self.rootScrollView.contentSize=CGSizeMake(0, 480);
 //    CCButton *sendBut = CCButtonCreateWithValue(CGRectMake(10, 0, 30, 20), @selector(onAddClick:), self);

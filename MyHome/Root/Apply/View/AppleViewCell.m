@@ -66,13 +66,18 @@
 }
 
 
--(void)setupData{
+-(void)setMsgStatue:(NSString *)msgStatue{
+    self.lbStatue.text=msgStatue;
+}
+
+-(void)setupData{ 
     self.bgIcon.image=[UIImage imageNamed:_state.appIcon];
     self.lbTitle.text=_state.appTitle;
     if (_state.appTag==1) {
         self.lbMsg.hidden=YES;
     }else{
         self.sxtBg.hidden=YES;
+        self.lbMsg.hidden=NO;
         self.lbMsg.text=_state.appMsg;
     }
     

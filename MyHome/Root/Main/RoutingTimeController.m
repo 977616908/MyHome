@@ -25,7 +25,6 @@ typedef enum{
     CADisplayLink *link;
     NSInteger pageCount;
     NSMutableArray *_arrTime;
-    UINavigationBar *navigationBar;
     NSArray *arrImgs;
     MBProgressHUD           *stateView;
     BOOL isRefresh;
@@ -60,6 +59,7 @@ typedef enum{
     if(ScreenHeight()<=480){
         self.rootTable.height=CGRectGetHeight(self.rootTable.frame)-88;
     }
+    [self createCustomNav];
     [self setupRefreshView];
     [self judgeWithLogin];
     [self createImage];
@@ -68,14 +68,37 @@ typedef enum{
 }
 
 
-
--(void)coustomNav{
-//    self.navigationItem.title=@"时光路游";
-    CCButton *sendBut = CCButtonCreateWithValue(CGRectMake(10, 0, 30,25), @selector(onCameraClick:), self);
+-(void)createCustomNav{
+    CGFloat gh=0;
+    NSString *backImage = @"hm_bg001_iOS6";
+    if (is_iOS7()) {
+        gh=20;
+        backImage = @"hm_bg001";
+    }
+    CCView *navTopView = [CCView createWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44+gh) backgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:backImage]]]; // RGBCommon(73, 170, 231)
+    //    [navTopView addSubview:CCImageViewCreateWithNewValue(@"ht_return", CGRectMake(10, 11.75+gh, 9, 16))];
+    NSString *prasentTitle  = @" 返回";
+    CCButton *btnBack = CCButtonCreateWithValue(CGRectMake(10, gh, 60,44), @selector(exitCurrentController), self);
+    btnBack.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
+    [btnBack setImage:[UIImage imageNamed:@"ht_return"] forState:UIControlStateNormal];
+    [btnBack alterNormalTitle:prasentTitle];
+    [btnBack alterNormalTitleColor:RGBWhiteColor()];
+    [btnBack alterFontSize:18];
+    
+    [navTopView addSubview:btnBack];
+    
+    CCLabel *_labTitle = CCLabelCreateWithNewValue(@"时光相册", 19, CGRectMake(CGRectGetWidth(self.view.frame)/2-40, gh, 80, 44));
+    _labTitle.textColor = RGBCommon(52, 52, 52);
+    _labTitle.backgroundColor = [UIColor clearColor];
+    [navTopView addSubview:_labTitle];
+    
+    CCButton *sendBut = CCButtonCreateWithValue(CGRectMake(CGRectGetWidth(self.view.frame)-45, gh+10, 30,25), @selector(onCameraClick:), self);
     sendBut.tag=1;
     [sendBut setImage:[UIImage imageNamed:@"hm_shangchuan"] forState:UIControlStateNormal];
     [sendBut setImage:[UIImage imageNamed:@"hm_shangchuan_select"] forState:UIControlStateSelected];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:sendBut];
+    [navTopView addSubview:sendBut];
+    
+    [self.view addSubview:navTopView];
 }
 
 -(void)createImage{
@@ -83,7 +106,6 @@ typedef enum{
     [self.topImg addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onCameraClick:)]];
     //    UIImage *image=[[UIImage imageNamed:@"hm_top"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0,  130, 0) resizingMode:UIImageResizingModeStretch];
 //    self.topImg.image=[UIImage imageNamed:@"hm_top"];
-    navigationBar=self.navigationController.navigationBar;
     //    _rootScrollView.contentSize=CGSizeMake(0, CGRectGetHeight(self.view.frame)+14);
     _rootScrollView.contentSize=CGSizeMake(0, CGRectGetHeight(self.view.frame)-14);
     _rootScrollView.delegate=self;
@@ -125,7 +147,8 @@ typedef enum{
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self setNavBackground];
+    //    [self setNavBackground];
+    self.navigationController.navigationBarHidden=YES;
     BOOL isMacBouds=[GlobalShare isBindMac];
     if (isMacBouds) {
         NSString *pifiiTitle=[[NSUserDefaults standardUserDefaults] objectForKey:ROUTERNAME];
@@ -135,20 +158,6 @@ typedef enum{
     }
 }
 
-
--(void)setNavBackground{
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    NSString *backImage = @"hm_bg001_iOS6";
-    if (is_iOS7()) {
-        backImage = @"hm_bg001";
-    }
-    [navigationBar setBackgroundImage:[UIImage imageNamed:backImage] forBarMetrics:UIBarMetricsDefault];
-    textAttrs[UITextAttributeTextColor] = RGBCommon(52, 52, 52);
-    textAttrs[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero];
-    textAttrs[UITextAttributeFont] = [UIFont systemFontOfSize:19.0];
-    [navigationBar setTitleTextAttributes:textAttrs];
-    self.navigationController.toolbarHidden=YES;
-}
 
 -(void)initBase{
     NSString *jsonPath=[[NSBundle mainBundle]pathForResource:@"json" ofType:@"plist"];
@@ -402,13 +411,8 @@ typedef enum{
     return 189.0f;
 }
 
-
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (ScreenHeight()>480) {
-        return 0.0f;
-    }else{
-        return 94.0f;
-    }
+    return 10;
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -800,6 +804,7 @@ typedef enum{
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden=NO;
     [self stopAnimation];
 }
 

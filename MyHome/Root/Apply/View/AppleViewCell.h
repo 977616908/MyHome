@@ -15,6 +15,7 @@
 +(instancetype)cellWithTableView:(UITableView *)table;
 
 @property(nonatomic,strong)AppleStatue *state;
+@property(nonatomic,strong)NSString *msgStatue;
 
 -(void)setViewStyle:(NSInteger)styleTag;
 

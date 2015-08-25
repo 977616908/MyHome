@@ -10,6 +10,6 @@
 #import "CCTabBar.h"
 @interface RoutingTimeController : PiFiiBaseViewController
 
-@property(nonatomic,strong)CCTabBar *barView;
+//@property(nonatomic,strong)CCTabBar *barView;
 
 @end

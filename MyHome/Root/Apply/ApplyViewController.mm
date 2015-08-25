@@ -21,6 +21,7 @@
 #import "PPPPDefine.h"
 #import "CameraMessage.h"
 #import "RoutingCameraController.h"
+#import "RoutingTimeController.h"
 #import "AppleViewCell.h"
 #import "AppleStatue.h"
 
@@ -35,6 +36,7 @@
     BOOL isDefaultServer;
     NSMutableArray *arrDevice;
     NSString *pathArchive;
+    NSString *msgStatue;
 }
 @property(nonatomic,weak) IBOutlet UITableView *tableApp;
 @property(nonatomic,weak) IBOutlet UIImageView *imgBg;
@@ -149,6 +151,15 @@
                 }
     
             }
+            case 3:{
+                
+                AppleStatue *appState=[[AppleStatue alloc]init];
+                appState.appTitle=@"和百盒";
+                appState.appTag=5;
+                appState.appIcon=@"mh_mbhh";
+                appState.appMsg=@"娱乐、通信、信息服务、生活应用在内的智慧家庭解决方案";
+                [self pushViewDataSource:appState];
+            }
                 break;
             default:
                 break;
@@ -168,19 +179,11 @@
             CameraMessage *msg=[[CameraMessage alloc]initWithData:data];
             PSLog(@"%@",msg);
             if(msg.isOpen){
-//                UIImageView *image=_imgArr[0];
-//                if (image.tag!=1) {
-//                    image.tag=1;
-//                    [self startAnimation:image];
-//                }
-//                self.lbMsg.hidden=NO;
-//                self.lbMsg.textColor=RGBCommon(210, 79, 86);
-//                self.lbMsg.text=@"在线";
-//                self.cameraMsg=msg;
-//                m_pCameraListMgt = [[CameraListMgt alloc] init];
-//                [m_pCameraListMgt selectP2PAll:YES];
-//                [m_pCameraListMgt AddCamera:@"WIFICAM" DID:msg.camid User:msg.camname Pwd:msg.campas Snapshot:nil];
-//                [self performSelector:@selector(start) withObject:nil afterDelay:.25];
+                self.cameraMsg=msg;
+                m_pCameraListMgt = [[CameraListMgt alloc] init];
+                [m_pCameraListMgt selectP2PAll:YES];
+                [m_pCameraListMgt AddCamera:@"WIFICAM" DID:msg.camid User:msg.camname Pwd:msg.campas Snapshot:nil];
+                [self performSelector:@selector(start) withObject:nil afterDelay:.25];
             }
         }
     }
@@ -211,18 +214,18 @@
         }
             break;
         case 3:{
-//            RoutingListController *routingController=[[RoutingListController alloc]init];
-//            [self.navigationController pushViewController:routingController animated:YES];
+            RoutingTimeController  *routingController=[[RoutingTimeController alloc]init];
+            [self.navigationController pushViewController:routingController animated:YES];
             
-            RoutingCameraController *routingController;
-            if (ScreenHeight()>480) {
-                routingController=[[RoutingCameraController alloc]initWithNibName:@"RoutingCameraController" bundle:nil];
-            }else{
-                routingController=[[RoutingCameraController alloc]initWithNibName:@"RoutingCameraController640x960" bundle:nil];
-            }
-            routingController.arrCamera=[NSMutableArray array];
+//            RoutingCameraController *routingController;
+//            if (ScreenHeight()>480) {
+//                routingController=[[RoutingCameraController alloc]initWithNibName:@"RoutingCameraController" bundle:nil];
+//            }else{
+//                routingController=[[RoutingCameraController alloc]initWithNibName:@"RoutingCameraController640x960" bundle:nil];
+//            }
+//            routingController.arrCamera=[NSMutableArray array];
 //            routingController.dateStr=sb;
-            [self presentViewController:routingController animated:YES completion:nil];
+//            [self presentViewController:routingController animated:YES completion:nil];
         }
             break;
         case 4:{
@@ -253,6 +256,7 @@
     AppleViewCell *cell=[AppleViewCell cellWithTableView:tableView];
     cell.state=arrDevice[indexPath.row];
     [cell setViewStyle:indexPath.row%2];
+    cell.msgStatue=msgStatue;
     return cell;
 }
 
@@ -306,7 +310,7 @@
 -(void)pushViewDataSource:(id)dataSource{
     BOOL isAdd=NO;
     for (AppleStatue *statue in arrDevice) {
-        if (statue.appTag ==[dataSource appTag]) {
+        if (statue.appTag ==[dataSource appTag]&&[dataSource appTag]!=1) {
             isAdd=YES;
             break;
         }
@@ -419,7 +423,8 @@
 - (void) StopPPPPByDID:(NSString*)did
 {
 //    self.lbMsg.textColor=RGBCommon(128, 128, 128);
-//    self.lbMsg.text=@"正在连接";
+    msgStatue=@"正在连接";
+    [self.tableApp reloadData];
     pPPPPChannelMgt->Stop([did UTF8String]);
 }
 
@@ -447,38 +452,40 @@
 -(void)reloadCamera{
     NSDictionary *cameraDic = [m_pCameraListMgt GetCameraAtIndex:0];
     NSNumber *nPPPPStatus = [cameraDic objectForKey:@STR_PPPP_STATUS];
-//    self.lbMsg.textColor=RGBCommon(128, 128, 128);
-//    switch ([nPPPPStatus integerValue]) {
-//        case PPPP_STATUS_UNKNOWN://未知
-//            self.lbMsg.text=@"离线";
-//            break;
-//        case PPPP_STATUS_CONNECTING://正在连接
-//             self.lbMsg.text=@"正在连接";
-//            break;
-//        case PPPP_STATUS_INITIALING://正在初始化
-//             self.lbMsg.text=@"正在初始化";
-//            break;
-//        case PPPP_STATUS_CONNECT_FAILED://连接失败
-//             self.lbMsg.text=@"连接失败";
-//            break;
-//        case PPPP_STATUS_DISCONNECT://连接断开
-//             self.lbMsg.text=@"连接断开";
-//            break;
-//        case PPPP_STATUS_INVALID_ID://无效ID
-//             self.lbMsg.text=@"离线";
-//            break;
-//        case PPPP_STATUS_ON_LINE://在线
+    switch ([nPPPPStatus integerValue]) {
+        case PPPP_STATUS_UNKNOWN://未知
+            msgStatue=@"离线";
+            break;
+        case PPPP_STATUS_CONNECTING://正在连接
+             msgStatue=@"正在连接";
+            break;
+        case PPPP_STATUS_INITIALING://正在初始化
+             msgStatue=@"正在初始化";
+            break;
+        case PPPP_STATUS_CONNECT_FAILED://连接失败
+             msgStatue=@"连接失败";
+            break;
+        case PPPP_STATUS_DISCONNECT://连接断开
+             msgStatue=@"连接断开";
+            break;
+        case PPPP_STATUS_INVALID_ID://无效ID
+             msgStatue=@"离线";
+            break;
+        case PPPP_STATUS_ON_LINE://在线
 //            self.lbMsg.textColor=RGBCommon(210, 79, 86);
-//             self.lbMsg.text=@"在线";
-//            break;
-//        case PPPP_STATUS_DEVICE_NOT_ON_LINE://摄像机不在线
-//             self.lbMsg.text=@"离线";
-//            break;
-//        case PPPP_STATUS_CONNECT_TIMEOUT://连接超时
-//            self.lbMsg.text=@"连接超时";
-//            break;
-//    }
-
+             msgStatue=@"在线";
+            break;
+        case PPPP_STATUS_DEVICE_NOT_ON_LINE://摄像机不在线
+             msgStatue=@"离线";
+            break;
+        case PPPP_STATUS_CONNECT_TIMEOUT://连接超时
+            msgStatue=@"连接超时";
+            break;
+        default:
+            msgStatue=@"未知";
+            break;
+    }
+    [self.tableApp reloadData];
 }
 
 #pragma mark -

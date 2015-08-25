@@ -24,6 +24,9 @@
 		5E2BFB971B71EE510001DB5F /* mh_wifii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BFB931B71EE510001DB5F /* mh_wifii@2x.png */; };
 		5E2BFB9D1B7202690001DB5F /* AccessDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BFB991B7202690001DB5F /* AccessDeviceViewController.m */; };
 		5E53473D1A5D1FDC0028BE4D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E53473C1A5D1FDB0028BE4D /* AssetsLibrary.framework */; };
+		5E5CD9601B8B15220030551C /* mh_mbhh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CD95D1B8B15220030551C /* mh_mbhh@2x.png */; };
+		5E5CD9611B8B15220030551C /* mh_sjxc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CD95E1B8B15220030551C /* mh_sjxc@2x.png */; };
+		5E5CD9621B8B15220030551C /* mh_sxtt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CD95F1B8B15220030551C /* mh_sxtt@2x.png */; };
 		5E6176601B72F67D00E19488 /* AccessDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E61765C1B72F67D00E19488 /* AccessDeviceCell.m */; };
 		5E6176611B72F67D00E19488 /* ChannelSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E61765E1B72F67D00E19488 /* ChannelSetViewController.m */; };
 		5E6176641B72F71100E19488 /* ChannelSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E6176631B72F71100E19488 /* ChannelSetViewController.xib */; };
@@ -38,8 +41,6 @@
 		5E65525E1B86D2BB00E20093 /* mh_sxt_lx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E65525C1B86D2BB00E20093 /* mh_sxt_lx@2x.png */; };
 		5E65525F1B86D2BB00E20093 /* mh_sxt_zx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E65525D1B86D2BB00E20093 /* mh_sxt_zx@2x.png */; };
 		5E6552621B870B6800E20093 /* AppleStatue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6552611B870B6800E20093 /* AppleStatue.m */; };
-		5E6552641B87189800E20093 /* mh_sjxc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6552631B87189800E20093 /* mh_sjxc@2x.png */; };
-		5E6552661B872F5600E20093 /* mh_sxtt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6552651B872F5600E20093 /* mh_sxtt@2x.png */; };
 		5E6DC05D1B7099D800F8B87F /* DimensionalCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6DC05C1B7099D800F8B87F /* DimensionalCode.framework */; };
 		5E6DCC3F1B709E8600F8B87F /* AFHTTPCilent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC7D11B709E8400F8B87F /* AFHTTPCilent.m */; };
 		5E6DCC401B709E8600F8B87F /* APICacheManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DC7D31B709E8400F8B87F /* APICacheManagement.m */; };
@@ -829,6 +830,9 @@
 		5E2BFB981B7202690001DB5F /* AccessDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessDeviceViewController.h; sourceTree = "<group>"; };
 		5E2BFB991B7202690001DB5F /* AccessDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessDeviceViewController.m; sourceTree = "<group>"; };
 		5E53473C1A5D1FDB0028BE4D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		5E5CD95D1B8B15220030551C /* mh_mbhh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_mbhh@2x.png"; sourceTree = "<group>"; };
+		5E5CD95E1B8B15220030551C /* mh_sjxc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_sjxc@2x.png"; sourceTree = "<group>"; };
+		5E5CD95F1B8B15220030551C /* mh_sxtt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_sxtt@2x.png"; sourceTree = "<group>"; };
 		5E61765B1B72F67D00E19488 /* AccessDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessDeviceCell.h; sourceTree = "<group>"; };
 		5E61765C1B72F67D00E19488 /* AccessDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessDeviceCell.m; sourceTree = "<group>"; };
 		5E61765D1B72F67D00E19488 /* ChannelSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSetViewController.h; sourceTree = "<group>"; };
@@ -847,8 +851,6 @@
 		5E65525D1B86D2BB00E20093 /* mh_sxt_zx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_sxt_zx@2x.png"; sourceTree = "<group>"; };
 		5E6552601B870B6800E20093 /* AppleStatue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleStatue.h; sourceTree = "<group>"; };
 		5E6552611B870B6800E20093 /* AppleStatue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleStatue.m; sourceTree = "<group>"; };
-		5E6552631B87189800E20093 /* mh_sjxc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_sjxc@2x.png"; sourceTree = "<group>"; };
-		5E6552651B872F5600E20093 /* mh_sxtt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mh_sxtt@2x.png"; sourceTree = "<group>"; };
 		5E6DC05C1B7099D800F8B87F /* DimensionalCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DimensionalCode.framework; sourceTree = "<group>"; };
 		5E6DC7D01B709E8400F8B87F /* AFHTTPCilent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPCilent.h; sourceTree = "<group>"; };
 		5E6DC7D11B709E8400F8B87F /* AFHTTPCilent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPCilent.m; sourceTree = "<group>"; };
@@ -3589,8 +3591,9 @@
 		5EB708A91B70C24F00AD14AF /* MyImags */ = {
 			isa = PBXGroup;
 			children = (
-				5E6552651B872F5600E20093 /* mh_sxtt@2x.png */,
-				5E6552631B87189800E20093 /* mh_sjxc@2x.png */,
+				5E5CD95D1B8B15220030551C /* mh_mbhh@2x.png */,
+				5E5CD95E1B8B15220030551C /* mh_sjxc@2x.png */,
+				5E5CD95F1B8B15220030551C /* mh_sxtt@2x.png */,
 				5E65525C1B86D2BB00E20093 /* mh_sxt_lx@2x.png */,
 				5E65525D1B86D2BB00E20093 /* mh_sxt_zx@2x.png */,
 				5E65525A1B86D20A00E20093 /* mh_sxt_cell@2x.png */,
@@ -3916,13 +3919,14 @@
 				5E6DCD371B709E8600F8B87F /* hm_save02.jpg in Resources */,
 				5E6DCD011B709E8600F8B87F /* recordsel.png in Resources */,
 				5E2BFB941B71EE510001DB5F /* mh_person@2x.png in Resources */,
-				5E6552641B87189800E20093 /* mh_sjxc@2x.png in Resources */,
+				5E5CD9611B8B15220030551C /* mh_sjxc@2x.png in Resources */,
 				5E6DCDDB1B709E8600F8B87F /* hm_shenlan@2x.png in Resources */,
 				5E6DCD871B709E8600F8B87F /* 0730dhk@2x.png in Resources */,
 				5E6DCD551B709E8600F8B87F /* 0603_hm_duihao@2x.png in Resources */,
 				5E6DCE441B709E8600F8B87F /* hm_tjgpy@2x.png in Resources */,
 				5E6DCE7F1B709E8600F8B87F /* rt_start@2x.png in Resources */,
 				5E6DCDFB1B709E8600F8B87F /* hm_zh@2x.png in Resources */,
+				5E5CD9621B8B15220030551C /* mh_sxtt@2x.png in Resources */,
 				5E6DCD691B709E8600F8B87F /* 0610hm_anniu@2x.png in Resources */,
 				5E6DCE141B709E8600F8B87F /* hm_asxl@2x.png in Resources */,
 				5E6DCE5C1B709E8600F8B87F /* hm_zhaopian@2x.png in Resources */,
@@ -4095,7 +4099,6 @@
 				5E6DCD751B709E8600F8B87F /* 0610hm_shipin@2x.png in Resources */,
 				5E6DCD421B709E8600F8B87F /* hm_srk@2x.png in Resources */,
 				5E6DCD4E1B709E8600F8B87F /* hm_yunxiazai@2x.png in Resources */,
-				5E6552661B872F5600E20093 /* mh_sxtt@2x.png in Resources */,
 				5E6DCE4F1B709E8600F8B87F /* hm_wfp@2x.png in Resources */,
 				5E6DCCAF1B709E8600F8B87F /* ShareSDKLocalizable.strings in Resources */,
 				5E6DCCDC1B709E8600F8B87F /* del_hook.png in Resources */,
@@ -4243,6 +4246,7 @@
 				5E6DCD481B709E8600F8B87F /* hm_xiala@2x.png in Resources */,
 				5E6DCDC91B709E8600F8B87F /* hm_jindutiao@2x.png in Resources */,
 				5E6DCD991B709E8600F8B87F /* 0730wd@2x.png in Resources */,
+				5E5CD9601B8B15220030551C /* mh_mbhh@2x.png in Resources */,
 				5E6DCD0B1B709E8600F8B87F /* snapshotsel.png in Resources */,
 				5E6DCD241B709E8600F8B87F /* hm_coundsc@2x.png in Resources */,
 				5E6DCD981B709E8600F8B87F /* 0730video@2x.png in Resources */,
